@@ -1,0 +1,4 @@
+/dsEnv
+.env
+__pycache__/
+*.pyc
