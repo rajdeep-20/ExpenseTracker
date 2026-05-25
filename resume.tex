@@ -1,0 +1,491 @@
+  %-------------------------
+  % Resume in Latex
+  % Author : Rajdeep Ghosh (Adapted from Jake Gutierrez)
+  % Based off of: https://github.com/sb2nov/resume
+  % License : MIT
+  %------------------------
+
+  \documentclass[letterpaper,11pt]{article}
+
+  \usepackage{latexsym}
+  \usepackage[empty]{fullpage}
+  \usepackage{titlesec}
+  \usepackage{marvosym}
+  \usepackage[usenames,dvipsnames]{color}
+  \usepackage{verbatim}
+  \usepackage{enumitem}
+  \usepackage[hidelinks]{hyperref}
+  \usepackage{fancyhdr}
+  \usepackage[english]{babel}
+  \usepackage{tabularx}
+  \usepackage{graphicx}
+  \input{glyphtounicode}
+
+
+  %----------FONT OPTIONS----------
+  % sans-serif
+  % \usepackage[sfdefault]{FiraSans}
+  % \usepackage[sfdefault]{roboto}
+  % \usepackage[sfdefault]{noto-sans}
+  % \usepackage[default]{sourcesanspro}
+
+  % serif
+  % \usepackage{CormorantGaramond}
+  % \usepackage{charter}
+
+
+  \pagestyle{fancy}
+  \fancyhf{} % clear all header and footer fields
+  \fancyfoot{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+
+  % Adjust margins
+  \addtolength{\oddsidemargin}{-0.5in}
+  \addtolength{\evensidemargin}{-0.5in}
+  \addtolength{\textwidth}{1in}
+  \addtolength{\topmargin}{-.5in}
+  \addtolength{\textheight}{1.0in}
+
+  \urlstyle{same}
+
+  \raggedbottom
+  \raggedright
+  \setlength{\tabcolsep}{0in}
+
+  % Sections formatting
+  \titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large
+  }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+  % Ensure that generate pdf is machine readable/ATS parsable
+  \pdfgentounicode=1
+
+  %-------------------------
+  % Custom commands
+  \newcommand{\resumeItem}[1]{
+    \item\small{
+      {#1 \vspace{-2pt}}
+    }
+  }
+
+  \newcommand{\resumeSubheading}[4]{
+    \vspace{-2pt}\item
+      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{\small#3} & \textit{\small #4} \\
+      \end{tabular*}\vspace{-7pt}
+  }
+
+  \newcommand{\resumeSubSubheading}[2]{
+      \item
+      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textit{\small#1} & \textit{\small #2} \\
+      \end{tabular*}\vspace{-7pt}
+  }
+
+  \newcommand{\resumeProjectHeading}[2]{
+      \item
+      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \small#1 & #2 \\
+      \end{tabular*}\vspace{-7pt}
+  }
+
+  \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+  \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+  \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+  \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+  \newcommand{\resumeItemListStart}{\begin{itemize}}
+  \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+  %-------------------------------------------
+  %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+  \begin{document}
+
+  %----------HEADING----------
+  \begin{center}
+      \textbf{\Huge \scshape Rajdeep Ghosh} \\ \vspace{5pt}
+      % \textbf{\Large Software Engineer Intern} \\ \vspace{5pt} % Added Job Title match [cite: 30]
+      \small
+      % 'height=1em' scales the image to match the text height
+      
+      \includegraphics[height=1em]{phone.jpg} +91-6299916376 \ $|$ \ 
+      \href{mailto:rajdeepghosh022@gmail.com}{
+          \includegraphics[height=1em]{gmail.png} \underline{rajdeepghosh022@gmail.com}
+      } \ $|$ \ 
+      \href{https://www.linkedin.com/in/rajdeep-ghosh-9a4806249/}{
+          \includegraphics[height=1em]{linkedin.png} 
+          \underline{LinkedIn}
+      } \ $|$ \ 
+      \href{https://github.com/Rajdeep-20}{
+          \includegraphics[height=1em]{github.png} 
+          \underline
+          {Github}
+      }
+      \\
+      \centering{Noida, Uttar Pradesh}
+  \end{center}
+
+  % %-----------Work Experience-----------
+  % \section{Work Experience}
+  %   \resumeSubHeadingListStart
+  %     \resumeSubheading
+  %       {Paytm}{Noida, Uttar Pradesh}
+  %       {Software Development Engineer in Test}{Feb. 2026 -- Present}
+
+
+
+  %-----------Work Experience-----------
+  \section{Work Experience}
+    \resumeSubHeadingListStart
+      \resumeSubheading
+        {Paytm}{Noida, Uttar Pradesh}
+        {Software Development Engineer in Test (SDET)}{Feb. 2026 -- Present}
+        \resumeItemListStart
+          \resumeItem{Navigated a complex \textbf{Microservices} architecture, validating end-to-end data flows and backend state configurations utilizing \textbf{Kafka}, Offset Explorers, and \textbf{Kibana} on \textbf{Amazon EKS}.}
+          \resumeItem{Conducted comprehensive testing and debugging of Android-based EDC Paydroid devices using \textbf{ADB}, while gaining architectural insights into UI automation via \textbf{Appium} and \textbf{TestNG} suites.}
+          \resumeItem{Spearheaded sanity testing and device-middleware log analysis for RTOS-based IoT Soundboxes, interacting extensively with \textbf{AWS MQTT clients} and \textbf{Amazon S3} for telemetry data.}
+          \resumeItem{Streamlined defect tracking and version control workflows by leveraging \textbf{Jira}, \textbf{Git}, and \textbf{Bitbucket}, collaborating closely with backend teams to resolve intricate hardware-software integration issues.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+        
+
+
+
+  %-----------EDUCATION-----------
+  \section{Education}
+    \resumeSubHeadingListStart
+      \resumeSubheading
+        {Chandigarh University}{Gharuan, Punjab}
+        {B.E. in Computer Science (AI \& ML Specialization)}{Aug. 2022 -- Present}
+    %   \resumeSubheading
+    %     {Loyola High School}{Patna, Bihar}
+    %     {Intermediate (CBSE); Percentage}{2020 -- 2022}
+    %   \resumeSubheading
+    %     {Don Bosco Academy}{Patna, Bihar}
+    %     {Matriculation (ICSE); Percentage}{2019 -- 2020}
+    % \resumeSubHeadingListEnd
+
+
+  %-----------PROJECTS-----------
+  \section{Projects}
+      \resumeSubHeadingListStart
+      \begin{comment}
+        \resumeProjectHeading
+            {\textbf{Full-Stack AI Image Analyzer} $|$ \emph{React, Node.js, Python, FastAPI, MongoDB}}{Oct. 2025}
+            \resumeItemListStart
+              % Verbs: Architected, Integrated, Designed, Containerized
+              \resumeItem{Architected a high-performance microservices application using \textbf{React}, \textbf{FastAPI}, and \textbf{Node.js}, ensuring modular scalability.}
+              \resumeItem{Integrated \textbf{Hugging Face Transformer models}, enabling real-time image captioning and object detection with \textbf{sub-second inference latency}.}
+              \resumeItem{Designed a \textbf{MongoDB} data layer to efficiently log thousands of user interactions, coupled with a fluid UI that improved user retention.}
+              \resumeItem{Containerized the entire stack using \textbf{Docker}, reducing deployment time by \textbf{40\%} and eliminating environment discrepancies.}
+            \resumeItemListEnd
+          \end{comment}
+
+          % \resumeProjectHeading{\textbf{Expense Tracker} \emph{Java, Spring Boot, Kafka, Docker, MySQL}}{Jan. 2026 -- Present}\resumeItemListStart\resumeItem{Architected a highly scalable \textbf{Microservices architecture} by containerizing Java Spring Boot services using \textbf{Docker}, enabling independent scaling and seamless cross-environment deployment.}
+          
+          % \resumeItem{Integrated \textbf{Kong API Gateway} to manage and distribute incoming traffic across specialized services, implementing centralized routing and enhanced security for the ecosystem.}
+          
+          % \resumeItem{Engineered a high-performance \textbf{Authentication Service} using REST APIs, generating and validating secure tokens to manage user sessions across distributed nodes.}
+          
+          % \resumeItem{Implemented an asynchronous data pipeline using \textbf{Apache Kafka}, decoupling the Auth Service from the User Database to ensure eventual consistency and high system availability even during peak loads.}
+          
+          % \resumeItem{Designed the system to be \textbf{fault-tolerant} by utilizing Docker's container orchestration and Kong's traffic management, reducing system-wide failure risks during individual service drops.}
+          
+          % \resumeItemListEnd
+
+          \resumeProjectHeading
+      {\textbf{Expense Tracker} \emph{Java, Spring Boot, Kafka, Docker, MySQL}}{Jan 2026 --  Present}
+      \resumeItemListStart
+          \resumeItem{Architected a \textbf{RESTful Microservices} ecosystem comprising Auth, User, and Expense services, containerized using \textbf{Docker} for seamless cross-environment deployment and independent scaling.}
+          \resumeItem{Engineered an asynchronous data pipeline using \textbf{Apache Kafka} to decouple services, ensuring eventual consistency and system availability during peak loads.}
+          \resumeItem{Implemented robust \textbf{DB connectivity} with \textbf{MySQL} via Spring Data JPA, optimizing queries for high-performance data retrieval and secure transaction management.}
+          \resumeItem{Integrated \textbf{Kong API Gateway} for centralized traffic routing, CORS management, and secure token-based session validation across distributed nodes.}
+      \resumeItemListEnd
+          
+        % \resumeProjectHeading
+        %   {\textbf{Python Color Picker} $|$ \emph{Python, OpenCV, Pandas}}{Feb. 2024} 
+        %   \resumeItemListStart
+        %     % Verbs: Built, Optimized, Incorporated
+        %     \resumeItem{Built a high-precision color analysis tool using \textbf{Python} and \textbf{OpenCV}, enabling instant identification of RGB/HEX codes.}
+        %     \resumeItem{Optimized real-time pixel mapping algorithms to handle \textbf{4K resolution images} with \textbf{$<$50ms latency}.}
+        %     \resumeItem{Implemented a palette history feature that reduced repeated color lookups by 35\%, improving workflow speed.}
+        %   \resumeItemListEnd
+          
+        \resumeProjectHeading
+            {\textbf{Real-Time Face Recognition System} $|$ \emph{Python, OpenCV, PIL}}{Jan. 2024}
+            \resumeItemListStart
+              % Verbs: Engineered, Leveraged, Devised (Changed from Constructed/Utilized to avoid repetition)
+              \resumeItem{Engineered a computer vision system capable of detecting and tracking multiple faces in live video feeds.}
+              \resumeItem{Leveraged OpenCV algorithms to track \textbf{10+ faces simultaneously} with \textbf{90\% accuracy} under varying lighting conditions.}
+              \resumeItem{Devised efficient image processing techniques to maintain a steady \textbf{30 FPS framerate} on standard hardware.}
+            \resumeItemListEnd
+      \resumeSubHeadingListEnd
+
+
+
+  % \section{Publications}
+
+  % \textbf{Component-Caching GAN (CC-GAN): A Computationally Efficient Framework} \hfill \textit{Co-Author} \\
+  % \textit{High-Fidelity, 3D-Aware Text-to-Image Synthesis} \\
+  % \vspace{-1mm}
+  % \begin{itemize} \itemsep -2pt
+  %     \item Co-authored this research paper, explicitly proposing the framework's core novelties to address the efficiency-control dilemma in generative AI.
+  %     \item Conceptualized the \textbf{Component Caching mechanism}, which creates a dynamic library of reusable visual feature vectors to minimize computational redundancy.
+  %     \item Formulated \textbf{Coupled Attention Localization (CALL)}, a training-free inference technique that manipulates cross-attention maps to enable precise 3D-aware viewpoint control.
+  % \end{itemize}
+
+  % \section{Publications}
+
+  % \resumeProjectHeading
+  %   {\textbf{Component-Caching GAN (CC-GAN)}}%
+  %   {\emph{Co-Author} | July -- Dec 2025}
+
+  % \resumeItemListStart
+  %   \resumeItem{Co-authored a research paper proposing \textbf{CC-GAN}, explicitly conceptualizing the novel \textbf{Component Caching Mechanism} for computational efficiency and \textbf{Coupled Attention Localization (CALL)} for precise 3D-aware viewpoint control.}
+  % \resumeItemListEnd
+
+
+      
+  %-----------ACHIEVEMENTS & CERTIFICATIONS-----------
+  \section{Achievements \& Certifications}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+        {\textbf{Competitive Programming} $|$ \emph{Algorithm Design \& Data Structures}}{}
+        \resumeItemListStart
+          \resumeItem{\href{https://codeforces.com/profile/Raj-12}{\textbf{Codeforces Specialist:}} Secured a peak rating of \textbf{1412}, ranking among the top competitive programmers globally.}
+
+          \resumeItem{\href{https://atcoder.jp/users/deep_2012}{\textbf{AtCoder:}} Reached an all-time high rating of \textbf{1044 (5 Kyu)}, demonstrating consistent performance in algorithmic contests.}
+
+        \resumeItemListEnd
+
+      % \resumeProjectHeading
+      %   {\textbf{Professional Certifications} $|$ \emph{Cloud Computing}}{}
+      %   \resumeItemListStart
+      %     \resumeItem{\textbf{\href{https://www.credly.com/badges/6f6c91e0-0174-456e-8120-817b70322eb0/public_url}{Google Cloud Certified} - Digital Leader (July 2024):} Validated knowledge of cloud core services and security.}
+      %     \resumeItem{\textbf{\href{https://www.credly.com/badges/69005289-4189-45fd-a056-4f1c39db7dec/print}{AWS Academy Graduate} - Cloud Foundations (June 2023):} Demonstrated proficiency in AWS cloud architecture.}
+      %   \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+  %-----------PROGRAMMING SKILLS-----------
+  \section{Technical Skills}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+      \small{\item{
+      \textbf{Languages}{: C++, Java, Python, SQL, Bash} \\
+      \textbf{Cloud \& DevOps}{: Google Cloud Platform (GCP), docker, kafka} \\
+      \textbf{Frameworks}{: Springboot, OpenCV, Pandas, NumPy, Scikit-learn} \\
+      \textbf{Soft Skills}{: Strong Communication, Team Leadership, Mentoring, Public Speaking} \\
+      \textbf{Tools}{: Git, GitHub, VS Code, gradle}
+      }}
+  \end{itemize}
+
+  %-------------------------------------------
+  \end{document}
+
+
+
+
+
+
+
+
+  % %-------------------------
+  % % Resume in Latex
+  % % Author : Rajdeep Ghosh
+  % % Adapted for: Developer Role & ATS Optimization
+  % %------------------------
+
+  % \documentclass[letterpaper,11pt]{article}
+
+  % \usepackage{latexsym}
+  % \usepackage[empty]{fullpage}
+  % \usepackage{titlesec}
+  % \usepackage{marvosym}
+  % \usepackage[usenames,dvipsnames]{color}
+  % \usepackage{verbatim}
+  % \usepackage{enumitem}
+  % \usepackage[hidelinks]{hyperref}
+  % \usepackage{fancyhdr}
+  % \usepackage[english]{babel}
+  % \usepackage{tabularx}
+  % \usepackage{graphicx}
+  % \input{glyphtounicode}
+
+  % \pagestyle{fancy}
+  % \fancyhf{} % clear all header and footer fields
+  % \fancyfoot{}
+  % \renewcommand{\headrulewidth}{0pt}
+  % \renewcommand{\footrulewidth}{0pt}
+
+  % % Adjust margins
+  % \addtolength{\oddsidemargin}{-0.5in}
+  % \addtolength{\evensidemargin}{-0.5in}
+  % \addtolength{\textwidth}{1in}
+  % \addtolength{\topmargin}{-.5in}
+  % \addtolength{\textheight}{1.0in}
+
+  % \urlstyle{same}
+
+  % \raggedbottom
+  % \raggedright
+  % \setlength{\tabcolsep}{0in}
+
+  % % Sections formatting
+  % \titleformat{\section}{
+  %   \vspace{-4pt}\scshape\raggedright\large
+  % }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+  % % Ensure that generate pdf is machine readable/ATS parsable
+  % \pdfgentounicode=1
+
+  % %-------------------------
+  % % Custom commands
+  % \newcommand{\resumeItem}[1]{
+  %   \item\small{
+  %     {#1 \vspace{-2pt}}
+  %   }
+  % }
+
+  % \newcommand{\resumeSubheading}[4]{
+  %   \vspace{-2pt}\item
+  %     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  %       \textbf{#1} & #2 \\
+  %       \textit{\small#3} & \textit{\small #4} \\
+  %     \end{tabular*}\vspace{-7pt}
+  % }
+
+  % \newcommand{\resumeProjectHeading}[2]{
+  %     \item
+  %     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  %       \small#1 & #2 \\
+  %     \end{tabular*}\vspace{-7pt}
+  % }
+
+  % \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+  % \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+  % \newcommand{\resumeItemListStart}{\begin{itemize}}
+  % \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+  % %-------------------------------------------
+  % %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  % \begin{document}
+
+  % %----------HEADING----------
+  % \begin{center}
+  %     \textbf{\Huge \scshape Rajdeep Ghosh} \\ \vspace{5pt}
+      % \textbf{\Large Software Engineer Intern - Backend/AI Systems} \\ \vspace{5pt} % Added Job Title match [cite: 30]
+  %     \small
+  %     \includegraphics[height=1em]{phone.jpg} +91-6299916376 \ $|$ \ 
+  %     \href{mailto:rajdeepghosh022@gmail.com}{
+  %         \includegraphics[height=1em]{gmail.png} \underline{rajdeepghosh022@gmail.com}
+  %     } \ $|$ \ 
+  %     \href{https://linkedin.com/in/rajdeep-ghosh}{
+  %         \includegraphics[height=1em]{linkedin.png} 
+  %         \underline{LinkedIn}
+  %     } \ $|$ \ 
+  %     \href{https://github.com/Rajdeep-20}{
+  %         \includegraphics[height=1em]{github.png} 
+  %         \underline{Github}
+  %     } \\ \vspace{3pt}
+  %     % \small Mohali, Punjab, India % Added location/address match 
+  % \end{center}
+
+  % %-----------EDUCATION-----------
+  % \section{Education}
+  %   \resumeSubHeadingListStart
+  %     \resumeSubheading
+  %       {Chandigarh University}{Gharuan, Punjab}
+  %       {\textbf{Bachelor} of Engineering (B.E.) in Computer Science (AI \& ML); CGPA: 7.49}{Aug. 2022 -- Present} 
+  %       \resumeItem{Final-year engineering student specializing in backend systems and machine learning.}
+
+  %       % Changed B.E. to Bachelor to match 
+  %     \resumeSubheading
+  %       {Loyola High School}{Patna, Bihar}
+  %       {Intermediate (CBSE); Percentage: 85\%}{2020 -- 2022}
+  %   \resumeSubHeadingListEnd
+
+  % %-----------TECHNICAL SKILLS-----------
+  % \section{Technical Skills}
+  %  \begin{itemize}[leftmargin=0.15in, label={}]
+  %     \small{\item{
+  %      \textbf{Programming Languages}{: C++, Java, Python, Go, SQL (Server-side development)} \\
+  %      \textbf{Software Systems \& Frameworks}{: React.js, Node.js, .NET Core, FastAPI, AngularJS, Git, GitHub} \\
+  %      \textbf{Databases}{: PostgreSQL (Relational), MongoDB (Non-Relational)}\\
+  %      \textbf{Development Methodologies}{: \textbf{Agile development}, Object-Relational Mapping (ORM), SDLC} \\
+  %      \textbf{Soft Skills}{: \textbf{Work well under pressure}, \textbf{Communication skills}, Team Leadership, \textbf{Troubleshooting}}
+  %     }}
+  %  \end{itemize}
+
+  % %-----------PROFESSIONAL EXPERIENCE-----------
+  % % Renamed from "Projects" to "Professional Experience" so ATS parses it 
+  % \section{Professional Experience}
+  %     \resumeSubHeadingListStart
+        
+  %       \resumeSubheading
+  %         {Full-Stack Developer (Project)}{Oct. 2025}
+  %         {Full-Stack Web Application (React, Node.js)}{Remote}
+  %           \resumeItemListStart
+  %             \resumeItem{Designed new \textbf{software systems} using \textbf{JavaScript (React)} and \textbf{Node.js}, creating a scalable microservices architecture.}
+  %             \resumeItem{Utilized advanced \textbf{programming languages} to integrate Hugging Face models, achieving real-time data processing with \textbf{sub-second latency}.}
+  %             \resumeItem{Demonstrated \textbf{problem-solving skills} by optimizing \textbf{MongoDB} queries, reducing data retrieval time by \textbf{40\%}.}
+  %             \resumeItem{Executed \textbf{troubleshooting}and debugging of API endpoints to ensure system stability before deployment.}
+  %           \resumeItemListEnd
+            
+  %       \resumeSubheading
+  %         {Software Developer (Project)}{Feb. 2024}
+  %         {Color Analysis Tool (Python, OpenCV)}{Remote} 
+  %         \resumeItemListStart
+  %           \resumeItem{Analyzed existing programs for modification purposes and built a high-precision tool handling 4K resolution images.}
+  %           \resumeItem{Showcased ability to work \textbf{well under pressure} by delivering the project ahead of the deadline while maintaining code quality.}
+  %           \resumeItem{Maintained \textbf{software systems} code and security by implementing efficient memory management techniques.}
+  %         \resumeItemListEnd
+          
+  %       \resumeSubheading
+  %           {Computer Vision Developer (Project)}{Jan. 2024}
+  %           {Real-Time Face Recognition System}{Remote}
+  %           \resumeItemListStart
+  %             \resumeItem{Engineered a tracking system capable of detecting 10+ faces simultaneously with \textbf{90\% accuracy}.}
+  %             \resumeItem{Developed complex vision pipelines that processed data in real-time, demonstrating ability to build massive systems efficiently.}
+  %             % \resumeItem{Used \textbf{communication skills} to document technical specifications and training guides for potential users.}
+  %             \resumeItem{Modified \textbf{software systems} to fit specific constraints, demonstrating the ability to learn new technologies quickly.}
+  %           \resumeItemListEnd
+  %     \resumeSubHeadingListEnd
+
+  % %-----------ACHIEVEMENTS & CERTIFICATIONS-----------
+  % \section{Achievements \& Volunteering}
+  %   \resumeSubHeadingListStart
+
+  %     \resumeProjectHeading
+  %       {\textbf{Competitive Programming} $|$ \emph{Algorithm Design}}{}
+  %       \resumeItemListStart
+  %         \resumeItem{Achieved \textbf{Codeforces Specialist (Rating: 1412)} and \textbf{AtCoder (Rating: 1044)}, demonstrating logic and speed.}
+  %       \resumeItemListEnd
+
+  %     \resumeSubheading
+  %       {Google Study Jams Co-Mentor}{Oct. 2023}
+  %       {R.V. College of Engineering}{Remote}
+  %       \resumeItemListStart
+  %         \resumeItem{Liaised with Development Managers and organizers to define the scope of the curriculum.}
+  %         \resumeItem{Created technical documents and training staff (students) on \textbf{Cloud Computing} concepts.}
+  %       \resumeItemListEnd
+
+  %     \resumeProjectHeading
+  %       {\textbf{Certifications}}{}
+  %       \resumeItemListStart
+  %         \resumeItem{\textbf{Google Cloud Certified - Digital Leader:} Validated knowledge of IT and cloud security.}
+  %         \resumeItem{\href{https://www.credly.com/badges/69005289-4189-45fd-a056-4f1c39db7dec/print}{AWS Academy Graduate} Cloud Foundations.}
+  %       \resumeItemListEnd
+
+  %   \resumeSubHeadingListEnd
+
+  % %-------------------------------------------
+  % \end{document}
+
+

@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS expense_tracker_db;
+CREATE DATABASE IF NOT EXISTS userservice;
+CREATE DATABASE IF NOT EXISTS expenseservice;
+
+GRANT ALL PRIVILEGES ON expense_tracker_db.* TO 'RAJ'@'%';
+GRANT ALL PRIVILEGES ON userservice.* TO 'RAJ'@'%';
+GRANT ALL PRIVILEGES ON expenseservice.* TO 'RAJ'@'%';
+FLUSH PRIVILEGES;
+
