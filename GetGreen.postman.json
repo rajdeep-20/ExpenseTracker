@@ -1,0 +1,308 @@
+{
+  "info": {
+    "name": "GetGreen APIs",
+    "description": "Postman collection for GetGreen services (Auth, Expense, and User).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth Service",
+      "item": [
+        {
+          "name": "Signup",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"password123\",\n    \"email\": \"test@example.com\",\n    \"firstname\": \"Test\",\n    \"lastName\": \"User\",\n    \"phoneNo\": 1234567890\n}"
+            },
+            "url": {
+              "raw": "{{auth_base_url}}/auth/v1/signup",
+              "host": [
+                "{{auth_base_url}}"
+              ],
+              "path": [
+                "auth",
+                "v1",
+                "signup"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{auth_base_url}}/auth/v1/login",
+              "host": [
+                "{{auth_base_url}}"
+              ],
+              "path": [
+                "auth",
+                "v1",
+                "login"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Refresh Token",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"token\": \"YOUR_REFRESH_TOKEN\"\n}"
+            },
+            "url": {
+              "raw": "{{auth_base_url}}/auth/v1/refreshToken",
+              "host": [
+                "{{auth_base_url}}"
+              ],
+              "path": [
+                "auth",
+                "v1",
+                "refreshToken"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Ping",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_ACCESS_TOKEN"
+              }
+            ],
+            "url": {
+              "raw": "{{auth_base_url}}/auth/v1/ping",
+              "host": [
+                "{{auth_base_url}}"
+              ],
+              "path": [
+                "auth",
+                "v1",
+                "ping"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Health Check (Auth)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{auth_base_url}}/health",
+              "host": [
+                "{{auth_base_url}}"
+              ],
+              "path": [
+                "health"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Expense Service",
+      "item": [
+        {
+          "name": "Get Expenses",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Id",
+                "value": "user_id_here"
+              }
+            ],
+            "url": {
+              "raw": "{{expense_base_url}}/expense/v1/getExpense",
+              "host": [
+                "{{expense_base_url}}"
+              ],
+              "path": [
+                "expense",
+                "v1",
+                "getExpense"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Expense",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "user_id_here"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"amount\": 150.50,\n    \"description\": \"Dinner\",\n    \"category\": \"FOOD\"\n}"
+            },
+            "url": {
+              "raw": "{{expense_base_url}}/expense/v1/addExpense",
+              "host": [
+                "{{expense_base_url}}"
+              ],
+              "path": [
+                "expense",
+                "v1",
+                "addExpense"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Health Check (Expense)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{expense_base_url}}/expense/v1/health",
+              "host": [
+                "{{expense_base_url}}"
+              ],
+              "path": [
+                "expense",
+                "v1",
+                "health"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "User Service",
+      "item": [
+        {
+          "name": "Get User",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"user_id\": \"YOUR_USER_ID_HERE\"\n}"
+            },
+            "url": {
+              "raw": "{{user_base_url}}/user/v1/getUser",
+              "host": [
+                "{{user_base_url}}"
+              ],
+              "path": [
+                "user",
+                "v1",
+                "getUser"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create or Update User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"user_id\": \"YOUR_USER_ID_HERE\",\n    \"first_name\": \"Test\",\n    \"last_name\": \"User\",\n    \"phone_number\": 1234567890,\n    \"email\": \"test@example.com\"\n}"
+            },
+            "url": {
+              "raw": "{{user_base_url}}/user/v1/createOrUpdate",
+              "host": [
+                "{{user_base_url}}"
+              ],
+              "path": [
+                "user",
+                "v1",
+                "createOrUpdate"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Health Check (User)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{user_base_url}}/user/v1/health",
+              "host": [
+                "{{user_base_url}}"
+              ],
+              "path": [
+                "user",
+                "v1",
+                "health"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "auth_base_url",
+      "value": "http://localhost:8000/api/auth",
+      "type": "string"
+    },
+    {
+      "key": "expense_base_url",
+      "value": "http://localhost:8000/api/expense",
+      "type": "string"
+    },
+    {
+      "key": "user_base_url",
+      "value": "http://localhost:8000/api/user",
+      "type": "string"
+    }
+  ]
+}
